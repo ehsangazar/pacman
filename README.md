@@ -15,7 +15,7 @@ This is a game written in JavaScript.
 - Pacman moving off the grid is prevented
 - You can create a new command file in `./commands` folder and address it in `index.js`
 
-## Game Coommands
+## Game Commands
 
 - `PLACE X,Y,F`
   -> F can be NORTH,SOUTH, EAST or WEST
