@@ -40,19 +40,6 @@ describe('App', () => {
     expect(report.x).toBe(3)
     expect(report.y).toBe(3)
   })
-  test('App sample3', async () => {
-    const gameObj = new GameModel({
-      dimensions: {
-        rows: 5,
-        cols: 5,
-      },
-    })
-    await gameObj.play('sample3')
-    const report = gameObj.pacmanObj.report()
-    expect(report.face).toBe('NORTH')
-    expect(report.x).toBe(3)
-    expect(report.y).toBe(3)
-  })
   test('App sample4', async () => {
     const gameObj = new GameModel({
       dimensions: {
