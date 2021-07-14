@@ -4,7 +4,7 @@ const fileReader = require('../utils/fileReader')
 
 class GameModel {
   constructor({ dimensions }) {
-    this.boardObj = new BoardModel(dimensions)
+    this.boardObj = new BoardModel({ dimensions })
     this.pacmanObj = new PacmanModel({ boardObj: this.boardObj })
   }
 
