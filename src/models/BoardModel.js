@@ -1,6 +1,5 @@
 class BoardModel {
   constructor() {
-    this.cells = []
     this.dimensions = {
       rows: 5,
       cols: 5,
@@ -9,6 +8,10 @@ class BoardModel {
 
   getDimensions() {
     return this.dimensions
+  }
+
+  setDimensions(dimensions) {
+    this.dimensions = dimensions
   }
 }
 
