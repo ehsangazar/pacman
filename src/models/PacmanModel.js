@@ -78,7 +78,7 @@ class PacmanModel {
   report() {
     if (!this.isPlaced) return false
     const state = { x: this.x, y: this.y, face: this.face }
-    console.log('REPORT', state)
+    console.log('report', state)
     return state
   }
 
