@@ -6,6 +6,7 @@ const fileReader = async (fileName) => {
     return await fs
       .readFileSync(filePath, 'utf8')
       .split('\n')
+      .filter((line) => line !== '')
       .map((line) => line.trim())
   }
   return null
