@@ -4,6 +4,7 @@ This is a game written in JavaScript.
 
 ## Scripts
 
+- `npm install` install all dependencies
 - `npm run dev` for development run
 - `npm run start` for production run
 - `npm run test` to run tests
