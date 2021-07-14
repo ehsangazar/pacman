@@ -15,6 +15,10 @@ class PacmanModel {
   right() {}
 
   report() {}
+
+  run(command) {
+    console.log('command', command)
+  }
 }
 
 module.exports = PacmanModel

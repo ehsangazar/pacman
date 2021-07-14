@@ -9,8 +9,11 @@ class GameModel {
   }
 
   async play(commandsFileName) {
-    const fileData = await fileReader(commandsFileName)
-    console.log('fileData', fileData)
+    const comands = await fileReader(commandsFileName)
+    await comands.forEach((command) => {
+      this.pacmanObj.run(command)
+    })
+    return true
   }
 }
 
