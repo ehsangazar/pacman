@@ -25,9 +25,10 @@ describe('BoardModel', () => {
     const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
     expect(boardObj.occupyXY({ x: 4, y: 4 })).toBe(true)
   })
-  test('BoardModel vacant doable x y', async () => {
+  test('BoardModel vacantXY doable x y', async () => {
     const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
-    expect(boardObj.vacant({ x: 4, y: 4 })).toBe(true)
+    boardObj.occupyXY({ x: 4, y: 4 })
+    expect(boardObj.vacantXY({ x: 4, y: 4 })).toBe(true)
   })
   test('BoardModel isXYNotOccupied', async () => {
     const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })

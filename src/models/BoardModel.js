@@ -19,7 +19,7 @@ class BoardModel {
     return true
   }
 
-  vacant({ x, y }) {
+  vacantXY({ x, y }) {
     if (!this.cells[x]) this.cells[x] = []
     this.cells[x][y] = 0
     return true
