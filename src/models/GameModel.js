@@ -1,5 +1,6 @@
 const PacmanModel = require('./PacmanModel')
 const BoardModel = require('./BoardModel')
+const fileReader = require('../utils/fileReader')
 
 class GameModel {
   constructor({ dimensions }) {
@@ -7,8 +8,9 @@ class GameModel {
     this.pacmanObj = new PacmanModel({ boardObj: this.boardObj })
   }
 
-  play(commandsFileName) {
-    console.log('commandFileName', commandsFileName)
+  async play(commandsFileName) {
+    const fileData = await fileReader(commandsFileName)
+    console.log('fileData', fileData)
   }
 }
 
