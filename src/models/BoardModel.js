@@ -22,6 +22,7 @@ class BoardModel {
   vacant({ x, y }) {
     if (!this.cells[x]) this.cells[x] = []
     this.cells[x][y] = 0
+    return true
   }
 
   isXYNotOccupied({ x, y }) {

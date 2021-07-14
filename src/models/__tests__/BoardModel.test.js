@@ -25,4 +25,29 @@ describe('BoardModel', () => {
     const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
     expect(boardObj.occupyXY({ x: 4, y: 4 })).toBe(true)
   })
+  test('BoardModel vacant doable x y', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    expect(boardObj.vacant({ x: 4, y: 4 })).toBe(true)
+  })
+  test('BoardModel isXYNotOccupied', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    expect(boardObj.isXYNotOccupied({ x: 4, y: 4 })).toBe(true)
+  })
+  test('BoardModel isXYInTheBoard', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    expect(boardObj.isXYInTheBoard({ x: 4, y: 4 })).toBe(true)
+  })
+  test('BoardModel isXYInTheBoard outside the board', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    expect(boardObj.isXYInTheBoard({ x: 4, y: 6 })).toBe(false)
+  })
+  test('BoardModel canOccupyXY', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    expect(boardObj.canOccupyXY({ x: 4, y: 4 })).toBe(true)
+  })
+  test('BoardModel isOccupied so can not go', async () => {
+    const boardObj = new BoardModel({ dimensions: { rows: 5, cols: 5 } })
+    boardObj.occupyXY({ x: 4, y: 4 })
+    expect(boardObj.canOccupyXY({ x: 4, y: 4 })).toBe(false)
+  })
 })
